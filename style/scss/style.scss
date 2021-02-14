@@ -2,30 +2,36 @@
 @import '../node_modules/poly-fluid-sizing/poly-fluid-sizing';
 
 .navigation{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    
+    border-bottom: 1px solid $gray;
+    background-color: $white;
+}
+
+.navigation__elements{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 1440px; 
     margin-right: auto;
     margin-left: auto;
     padding-right: $base3;
     padding-left: $base3;
-    max-width: 1440px;
-    max-height: 100px;
-    border-bottom: 1px solid $gray;
 }
 
-.wespress-logo{
+.navigation__logo{
     height: $base3;
-    // @include poly-fluid-sizing("margin-right", ($xs: $base3, $xxxl: 200px));
 }
 
-.navigation-links{
+.navigation__links{
     margin-top: $base4;
     margin-bottom: $base4;
 }
 
-a.navigation-link{
+a.navigation__link{
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -34,7 +40,7 @@ a.navigation-link{
     font-weight: $regular;
     color: $dark-gray;
     text-decoration: none;
-    margin-right: $base4;
+    @include poly-fluid-sizing("margin-right", ($xs: $base2, $xl: $base4, $xxxl: $base4));
 
     &:hover{
         color: $black;
@@ -53,12 +59,12 @@ a.navigation-link{
     }
 }
 
-.side-ctas{
+.side__ctas{
     display: flex;
     flex-direction: row;
 }
 
-.side-ctas a{
+.side__ctas a{
     font-family: $primary;
     font-size: $base2;
     font-weight: $regular;
@@ -81,5 +87,59 @@ a.get-started{
 
     &:hover{
         background-color: $orange;
+    }
+}
+
+.header{
+    position: relative;
+    text-align: center;
+    color: $white;
+}
+.header__background{
+    width: 100%;
+    height: auto;
+}
+.header__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header__title{
+    font-family: $primary;
+    color: $white;
+    font-weight: $regular;
+    @include poly-fluid-sizing("font-size",($xs: $base5, $xl: $base9, $xxxl: $base10));
+    line-height: 1.25;
+}
+.header__desc{
+    margin-top: $base1;
+    font-family: $secondary;
+    color: $white;
+    font-weight: $regular;
+    font-size: $base2;
+    margin-bottom: $base8;
+}
+a.header__button{
+    font-family: $primary;
+    font-weight: $bold;
+    font-size: $base2;
+    color: $black;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    padding: $base2 $base5;
+    border-radius: 50px;
+
+    &:hover{
+        background: $orange;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &:active{
+        background: $white;
+        color: $black;
+        cursor: pointer;
     }
 }
