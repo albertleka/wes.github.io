@@ -1,9 +1,68 @@
-h1 {
-  font-family: "Poppins", "Inter", "Arial", "sans-serif";
-  color: #ED4113; }
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+  max-width: 1440px;
+  max-height: 100px;
+  border-bottom: 1px solid #eee; }
 
-p {
-  font-family: "Inter", "Poppins", "Inter", "Arial", "sans-serif";
-  color: #1D222D; }
+.wespress-logo {
+  height: 24px; }
+
+.navigation-links {
+  margin-top: 32px;
+  margin-bottom: 32px; }
+
+a.navigation-link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
+  font-size: 16px;
+  font-weight: 400;
+  color: #9F9F9F;
+  text-decoration: none;
+  margin-right: 32px; }
+  a.navigation-link:hover {
+    color: #1D222D; }
+    a.navigation-link:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 1px;
+      left: 0;
+      border-bottom: 3px solid #ED4113;
+      z-index: 1; }
+
+.side-ctas {
+  display: flex;
+  flex-direction: row; }
+
+.side-ctas a {
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none; }
+
+.login {
+  margin-right: 16px;
+  color: #9F9F9F; }
+  .login:hover {
+    color: #1D222D; }
+
+a.get-started {
+  margin-left: 16px;
+  color: white !important;
+  background-color: #1D222D;
+  padding: 8px 16px 8px 16px;
+  border-radius: 50px; }
+  a.get-started:hover {
+    background-color: #ED4113; }
 
 /*# sourceMappingURL=style.css.map */
