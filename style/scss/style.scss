@@ -1,11 +1,85 @@
 @import "variables.scss";
+@import '../node_modules/poly-fluid-sizing/poly-fluid-sizing';
 
-h1{
-    font-family: $primary;
-    color:$orange;
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $base3;
+    padding-left: $base3;
+    max-width: 1440px;
+    max-height: 100px;
+    border-bottom: 1px solid $gray;
 }
 
-p{
-    font-family: $secondary;
-    color: $black;
+.wespress-logo{
+    height: $base3;
+    // @include poly-fluid-sizing("margin-right", ($xs: $base3, $xxxl: 200px));
+}
+
+.navigation-links{
+    margin-top: $base4;
+    margin-bottom: $base4;
+}
+
+a.navigation-link{
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-family: $primary;
+    font-size: $base2;
+    font-weight: $regular;
+    color: $dark-gray;
+    text-decoration: none;
+    margin-right: $base4;
+
+    &:hover{
+        color: $black;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 1px;
+            left: 0;
+            border-bottom: 3px solid $orange;
+            z-index: 1;
+        }
+
+    }
+}
+
+.side-ctas{
+    display: flex;
+    flex-direction: row;
+}
+
+.side-ctas a{
+    font-family: $primary;
+    font-size: $base2;
+    font-weight: $regular;
+    text-decoration: none;
+}
+
+.login{
+    margin-right: $base2;
+    color: $dark-gray;
+    &:hover{
+        color: $black;
+    }
+}
+a.get-started{
+    margin-left: $base2;
+    color: white !important;
+    background-color: $black;
+    padding: $base1 $base2 $base1 $base2;
+    border-radius: 50px;
+
+    &:hover{
+        background-color: $orange;
+    }
 }
