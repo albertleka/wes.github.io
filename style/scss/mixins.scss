@@ -1,0 +1,12 @@
+//Media Queries
+@mixin max($point) {
+    @media (max-width: $point) {@content;} 
+}
+
+@mixin min($poing){
+    @media (min-width:$point) {@content;}
+}
+
+@mixin min-max($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {@content;}
+}

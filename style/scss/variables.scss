@@ -5,6 +5,41 @@ $black: #1D222D;
 $blue: #01779F;
 $orange: #ED4113;
 
+
 //Fonts
 $primary: "Poppins", "Inter", "Arial", "sans-serif";
 $secondary: "Inter", $primary;
+
+
+//Font sizes
+$zero: 0;
+$base: 8px;
+$base1: $base*1;
+$base2: $base*2;
+$base3: $base*3;
+$base4: $base*4;
+$base5: $base*5;
+$base6: $base*6;
+$base7: $base*7;
+$base8: $base*8;
+$base9: $base*9;
+$base10: $base*10;
+
+
+//Font Weights
+$italic: italic;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$extrabold: 800;
+
+
+//Breakpoints
+$xs: 320px;
+$sm: 640px;
+$md: 990px;
+$lg: 1441px;
+$xl: 1921px;
+$xxl: 2560px;
+$xxxl: 4096px;
