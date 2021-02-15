@@ -143,3 +143,81 @@ a.header__button{
         cursor: pointer;
     }
 }
+
+.start{
+    @include poly-fluid-sizing("padding",($xs: $base5, $lg: $base12, $xxxl: $base12));
+    background-color: $gray;
+    margin-top: -3px;
+}
+
+.start__free{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.start__free-text{
+    width: 50%;
+}
+
+.start__free-cta{
+    width: 30%;
+    height: auto;
+    background-color: $black;
+    border-radius: $base1;
+    @include poly-fluid-sizing("padding",($xs: $base3, $lg: $base6, $xxxl: $base6));
+}
+
+.start__free{
+    width: 720px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start__free-title{
+    margin-bottom: $base4;
+    font-family: $primary;
+    @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base5, $xxxl: $base7));
+    font-weight: $medium;
+    color: $black;
+    line-height: 1.25;
+}
+
+.start__free-desc{
+    font-family: $secondary;
+    font-weight: $base2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+}
+
+.start__free-cta__title{
+    margin-bottom: $base1;
+    font-family: $primary;
+    @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base4, $xxxl: $base4));
+    font-weight: $regular;
+    color: $white;
+    line-height: 1.25;
+}
+.start__free-cta__desc{
+    font-family: $secondary;
+    font-weight: $base2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+    margin-bottom: $base5;
+}
+.start__free-cta__button{
+    color: white;
+    text-decoration: none;
+    font-family: $primary;
+    background-color: $orange;
+    padding: 8px 16px 8px 16px;
+    border-radius: 50px;
+
+    &:hover{
+        background-color: $white;
+        color: $black;
+    }
+}
