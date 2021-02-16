@@ -265,8 +265,8 @@ a.header__button:active {
 
 .start__free-cta__title {
   margin-bottom: 8px;
-  font-family: "Poppins", "Inter", "Arial", "sans-serif";
   font-size: 24px;
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
   font-weight: 400;
   color: #fff;
   line-height: 1.25;
@@ -307,6 +307,135 @@ a.header__button:active {
 .start__free-cta__button:hover {
   background-color: #fff;
   color: #1D222D;
+}
+
+.pricing {
+  display: flex;
+  margin-top: 48px;
+  align-self: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pricing__content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+  height: auto;
+}
+
+.pricing__tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pricing__tile {
+  width: 19%;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 16px;
+}
+@media (min-width: 320px) {
+  .pricing__tile {
+    padding: calc(1.4272970562vw + 11.4326494202px);
+  }
+}
+@media (min-width: 1441px) {
+  .pricing__tile {
+    padding: 32px;
+  }
+}
+@media (min-width: 4096px) {
+  .pricing__tile {
+    padding: 32px;
+  }
+}
+
+.pricing__tile-title {
+  font-size: 16px;
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
+  font-weight: 500;
+  color: #1D222D;
+  margin-bottom: 8px;
+}
+@media (min-width: 320px) {
+  .pricing__tile-title {
+    font-size: calc(0.4996876952vw + 14.4009993754px);
+  }
+}
+@media (min-width: 1921px) {
+  .pricing__tile-title {
+    font-size: 24px;
+  }
+}
+@media (min-width: 4096px) {
+  .pricing__tile-title {
+    font-size: 24px;
+  }
+}
+
+.pricing__tile-desc {
+  font-family: "Inter", "Poppins", "Inter", "Arial", "sans-serif";
+  font-weight: 16px;
+  color: #9F9F9F;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing__tile-price {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.pricing__tile-price__value {
+  font-size: 16px;
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
+  font-weight: 500;
+  color: #1D222D;
+  margin-right: 8px;
+}
+@media (min-width: 320px) {
+  .pricing__tile-price__value {
+    font-size: calc(0.4996876952vw + 14.4009993754px);
+  }
+}
+@media (min-width: 1921px) {
+  .pricing__tile-price__value {
+    font-size: 24px;
+  }
+}
+@media (min-width: 4096px) {
+  .pricing__tile-price__value {
+    font-size: 24px;
+  }
+}
+
+.pricing__tile-price__label {
+  font-family: "Inter", "Poppins", "Inter", "Arial", "sans-serif";
+  font-size: 10px;
+  color: #9F9F9F;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-left: 8px;
+}
+
+a.pricing__tile-cta {
+  font-family: "Poppins", "Inter", "Arial", "sans-serif";
+  text-decoration: none;
+  color: white !important;
+  background-color: #1D222D;
+  padding: 8px 16px 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+a.pricing__tile-cta:hover {
+  background-color: #ED4113;
 }
 
 /*# sourceMappingURL=style.css.map */

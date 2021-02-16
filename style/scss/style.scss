@@ -148,6 +148,7 @@ a.header__button{
     @include poly-fluid-sizing("padding",($xs: $base5, $lg: $base12, $xxxl: $base12));
     background-color: $gray;
     margin-top: -3px;
+    
 }
 
 .start__free{
@@ -194,8 +195,8 @@ a.header__button{
 
 .start__free-cta__title{
     margin-bottom: $base1;
-    font-family: $primary;
     @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base4, $xxxl: $base4));
+    font-family: $primary;
     font-weight: $regular;
     color: $white;
     line-height: 1.25;
@@ -219,5 +220,91 @@ a.header__button{
     &:hover{
         background-color: $white;
         color: $black;
+    }
+}
+
+
+.pricing{
+    display: flex;
+    margin-top: $base6;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pricing__content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    height: auto;
+}
+
+.pricing__tiles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pricing__tile{
+    width: 19%;
+    border-radius: $base1;
+    background-color: $white;
+    @include poly-fluid-sizing("padding",($xs: $base2, $lg: $base4, $xxxl: $base4));
+}
+
+.pricing__tile-title{
+    @include poly-fluid-sizing("font-size",($xs: $base2, $xl: $base3, $xxxl: $base3));
+    font-family: $primary;
+    font-weight: $medium;
+    color: $black;
+    margin-bottom: $base1;
+}
+
+.pricing__tile-desc{
+    font-family: $secondary;
+    font-weight: $base2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+    margin-bottom: $base2;
+    padding-bottom: $base2;
+    border-bottom: 1px solid $gray;
+}
+
+.pricing__tile-price{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-bottom: $base6;
+}
+
+.pricing__tile-price__value{
+    @include poly-fluid-sizing("font-size",($xs: $base2, $xl: $base3, $xxxl: $base3));
+    font-family: $primary;
+    font-weight: $medium;
+    color: $black;
+    margin-right: $base1;
+}
+
+.pricing__tile-price__label{
+    font-family: $secondary;
+    font-size: $base1+2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+    margin-left: $base1;
+}
+
+a.pricing__tile-cta{
+    font-family: $primary;
+    text-decoration: none;
+    color: white !important;
+    background-color: $black;
+    padding: $base1 $base2 $base1 $base2;
+    border-radius: 50px;
+    margin-bottom: $base2;
+
+    &:hover{
+        background-color: $orange;
     }
 }
