@@ -308,3 +308,68 @@ a.pricing__tile-cta{
         background-color: $orange;
     }
 }
+
+.more{
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    @include poly-fluid-sizing("padding",($xs: $base5, $lg: $base12, $xxxl: $base12));
+    align-items: center;
+}
+
+.more__text{
+    @include poly-fluid-sizing("padding-bottom",($xs: $base5, $lg: $base12, $xxxl: $base12));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more__text-title{
+    margin-bottom: $base4;
+    font-family: $primary;
+    @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base5, $xxxl: $base7));
+    font-weight: $medium;
+    color: $black;
+    line-height: 1.25;
+}
+
+.more__text-desc{
+    font-family: $secondary;
+    font-weight: $base2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+}
+
+.more__cards{
+    display: flex;
+    flex-direction: row;
+}
+
+.more__card{
+    @include poly-fluid-sizing("padding-left",($xs: $base3, $lg: $base6, $xxxl: $base6));
+    @include poly-fluid-sizing("padding-right",($xs: $base3, $lg: $base6, $xxxl: $base6));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more__card-icon{
+    height: $base7;
+}
+
+.more__card-title{
+    margin-top: $base4;
+    @include poly-fluid-sizing("font-size",($xs: $base2, $xl: $base3, $xxxl: $base3));
+    font-family: $primary;
+    font-weight: $medium;
+    color: $black;
+    margin-bottom: $base1;
+}
+.more__card-desc{
+    font-family: $secondary;
+    font-weight: $base2;
+    color: $dark-gray;
+    font-weight: $medium;
+    line-height: 1.7;
+}
