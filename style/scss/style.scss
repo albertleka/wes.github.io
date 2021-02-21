@@ -228,10 +228,20 @@ a.header__button{
 }
 
 .pricing__tile{
-    width: 19%;
+    width: 20%;
+    @include poly-fluid-sizing("margin-left",($xs: $base, $lg: $base, $xxxl: $base2));
+    @include poly-fluid-sizing("margin-right",($xs: $base, $lg: $base, $xxxl: $base2));
+    @include poly-fluid-sizing("padding",($xs: $base2, $lg: $base3, $xxxl: $base4));
     border-radius: $base1;
     background-color: $white;
-    @include poly-fluid-sizing("padding",($xs: $base2, $lg: $base4, $xxxl: $base4));
+
+    &:first-child{
+        margin-left: 0;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
 }
 
 .pricing__tile-title{
@@ -282,7 +292,7 @@ a.pricing__tile-cta{
     text-decoration: none;
     color: white !important;
     background-color: $black;
-    padding: $base1 $base2 $base1 $base2;
+    padding: $base1 $base2;
     border-radius: 50px;
     margin-bottom: $base2;
 
