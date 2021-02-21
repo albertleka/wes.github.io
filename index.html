@@ -12,7 +12,10 @@
 <body">
 	<div class="navigation">
 		<div class="navigation__elements">
-			<img class="navigation__logo"src="images/wespress --logo.svg" alt="Wespress logo">
+			<picture>
+				<source media="(max-width:990px)" srcset="images/wp--logo.svg">
+				<img class="navigation__logo" src="images/wespress--logo.svg" alt="Logo" style="width:auto;">
+			</picture>
 			<nav class="navigation__links">
 				<a href="#products" class="navigation__link hvr-underline-reveal products">Products</a>
 				<a href="#features" class="navigation__link hvr-underline-reveal features">Features</a>

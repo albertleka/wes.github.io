@@ -316,25 +316,63 @@ a.header__button:active {
 }
 
 .pricing__tile {
-  width: 19%;
+  width: 20%;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 16px;
   border-radius: 8px;
   background-color: #fff;
-  padding: 16px;
 }
 @media (min-width: 320px) {
   .pricing__tile {
-    padding: calc(1.4272970562vw + 11.4326494202px);
+    margin-left: 8px;
   }
 }
 @media (min-width: 1441px) {
   .pricing__tile {
-    padding: 32px;
+    margin-left: calc(0.3013182674vw + 3.6580037665px);
+  }
+}
+@media (min-width: 4096px) {
+  .pricing__tile {
+    margin-left: 16px;
+  }
+}
+@media (min-width: 320px) {
+  .pricing__tile {
+    margin-right: 8px;
+  }
+}
+@media (min-width: 1441px) {
+  .pricing__tile {
+    margin-right: calc(0.3013182674vw + 3.6580037665px);
+  }
+}
+@media (min-width: 4096px) {
+  .pricing__tile {
+    margin-right: 16px;
+  }
+}
+@media (min-width: 320px) {
+  .pricing__tile {
+    padding: calc(0.7136485281vw + 13.7163247101px);
+  }
+}
+@media (min-width: 1441px) {
+  .pricing__tile {
+    padding: calc(0.3013182674vw + 19.6580037665px);
   }
 }
 @media (min-width: 4096px) {
   .pricing__tile {
     padding: 32px;
   }
+}
+.pricing__tile:first-child {
+  margin-left: 0;
+}
+.pricing__tile:last-child {
+  margin-right: 0;
 }
 
 .pricing__tile-title {
@@ -415,7 +453,7 @@ a.pricing__tile-cta {
   text-decoration: none;
   color: white !important;
   background-color: #1D222D;
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px;
   border-radius: 50px;
   margin-bottom: 16px;
 }
