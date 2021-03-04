@@ -3,7 +3,7 @@
     @media (max-width: $point) {@content;} 
 }
 
-@mixin min($poing){
+@mixin min($point){
     @media (min-width:$point) {@content;}
 }
 

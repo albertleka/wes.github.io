@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 @import '../node_modules/poly-fluid-sizing/poly-fluid-sizing';
 
 .navigation{
@@ -19,6 +20,7 @@
     margin-left: auto;
     padding-right: $base3;
     padding-left: $base3;
+    height: $navigation-height;
 }
 
 .navigation__logo{
@@ -54,47 +56,82 @@ a.navigation__link{
 }
 
 .login{
-    margin-right: $base2;
-    color: $dark-gray;
-    &:hover{
-        color: $black;
+    display: none;
+    
+    @include min($md){
+        display: inline;    
+        margin-right: $base1;
+        color: $dark-gray;
+        &:hover{
+            color: $black;
+        }
     }
 }
+
 a.get-started{
-    margin-left: $base2;
-    color: white !important;
-    background-color: $orange;
-    padding: $base1 $base2 $base1 $base2;
-    border-radius: 50px;
+    display: none;
 
-    &:hover{
-        color: $white;
-        background-color: $black;
+    @include min($md){
+        display: inline;
+        margin-left: $base1;
+        margin-right: $base4;
+        color: white !important;
+        background-color: $orange;
+        padding: $base1 $base2 $base1 $base2;
+        border-radius: 50px;
+        white-space: pre;
+
+        &:hover{
+            color: $white;
+            background-color: $black;
+        }
     }
 }
 
-.header{
-    position: relative;
-    text-align: center;
-    color: $white;
+.hamburger{
+    margin-left: $base4;
 }
-.header__background{
+
+.header__image{
     width: 100%;
-    height: auto;
+	height:  100vh;
+	background-image: url('/images/wes-background.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+    text-align: center;
 }
 .header__content{
+    width: inherit;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include min($sm){
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
+
 .header__title{
     font-family: $primary;
     color: $white;
     font-weight: $regular;
-    @include poly-fluid-sizing("font-size",($xs: $base5, $xl: $base9, $xxxl: $base10));
+    @include poly-fluid-sizing("font-size",($xs: $base4, $sm: $base5, $md: $base5, $lg: $base7 , $xl: $base9, $xxxl: $base10));
     line-height: 1.25;
+    margin-top: $base10; 
+    margin-bottom: $base3;
+    
+
+    @include min($sm){
+        margin-top: 0;
+    }
 }
+
 .header__desc{
     margin-top: $base1;
     font-family: $secondary;
@@ -102,7 +139,10 @@ a.get-started{
     font-weight: $regular;
     font-size: $base2;
     margin-bottom: $base8;
+    @include poly-fluid-sizing("margin-bottom",($sm: $base8, $md: $base5, $lg: $base5 , $xl: $base7, $xxxl: $base8));
+    
 }
+
 a.header__button{
     font-family: $primary;
     font-weight: $bold;
@@ -113,6 +153,7 @@ a.header__button{
     border: none;
     padding: $base2 $base5;
     border-radius: 50px;
+    border-bottom: $base10;
 
     &:hover{
         background: $orange;
@@ -125,42 +166,44 @@ a.header__button{
         color: $black;
         cursor: pointer;
     }
+
+    @include min($sm){
+        margin-bottom: 0;
+    }
 }
 
 .start{
-    @include poly-fluid-sizing("padding",($xs: $base5, $lg: $base12, $xxxl: $base12));
+    @include poly-fluid-sizing("padding",($xs: $base5, $md: $base5, $lg: $base10, $xxxl: $base12));
     background-color: $gray;
     margin-top: -3px;
     
 }
 
-.start__free{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.start__free{    
+    
+    flex-direction: column;
+
+    @include min($sm){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .start__free-text{
-    width: 50%;
-}
+    width: auto;
+    margin-bottom: $base4;
 
-.start__free-cta{
-    width: 30%;
-    height: auto;
-    background-color: $black;
-    border-radius: $base1;
-    @include poly-fluid-sizing("padding",($xs: $base3, $lg: $base6, $xxxl: $base6));
-}
-
-.start__free{
-    width: 720px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    @include min($sm){
+        width: 300px;
+        @include poly-fluid-sizing("margin-right",($md: $base3, $xxxl: $base4));
+    }
 }
 
 .start__free-title{
-    margin-bottom: $base4;
+    margin-bottom: $base3;
     font-family: $primary;
     @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base5, $xxxl: $base7));
     font-weight: $medium;
@@ -173,8 +216,27 @@ a.header__button{
     font-weight: $base2;
     color: $dark-gray;
     font-weight: $medium;
-    line-height: 1.7;
+    line-height: 1.6;
 }
+
+.start__free-cta{
+    width: auto;
+    height: auto;
+    background-color: $black;
+    border-radius: $base1;
+    @include poly-fluid-sizing("padding",($xs: $base3, $lg: $base6, $xxxl: $base6));
+    @include poly-fluid-sizing("padding-bottom",($xs: $base4, $sm: $base5));
+
+    @include min($sm){
+        width: 300px;
+        height: auto;
+        background-color: $black;
+        border-radius: $base1;
+        @include poly-fluid-sizing("margin-left",($md: $base3, $xxxl: $base4));
+    }
+}
+
+
 
 .start__free-cta__title{
     margin-bottom: $base1;
@@ -199,6 +261,7 @@ a.header__button{
     background-color: $orange;
     padding: 8px 16px 8px 16px;
     border-radius: 50px;
+    white-space: pre;
 
     &:hover{
         background-color: $white;
@@ -223,27 +286,15 @@ a.header__button{
 }
 
 .pricing__tiles{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
 }
 
 .pricing__tile{
-    width: 20%;
-    @include poly-fluid-sizing("margin-left",($xs: $base, $lg: $base, $xxxl: $base2));
-    @include poly-fluid-sizing("margin-right",($xs: $base, $lg: $base, $xxxl: $base2));
-    @include poly-fluid-sizing("padding",($xs: $base2, $lg: $base3, $xxxl: $base4));
-    @include poly-fluid-sizing("padding-bottom",($xs: $base3, $lg: $base4, $xxxl: $base5));
+    padding: $base4 $base4 $base5 $base4;
     border-radius: $base1;
     background-color: $white;
-
-    &:first-child{
-        margin-left: 0;
-    }
-
-    &:last-child{
-        margin-right: 0;
-    }
 }
 
 .pricing__tile-title{
@@ -297,6 +348,7 @@ a.pricing__tile-cta{
     padding: $base1 $base2;
     border-radius: 50px;
     margin-bottom: $base2;
+    white-space: pre;
 
     &:hover{
         background-color: $orange;
@@ -322,7 +374,7 @@ a.pricing__tile-cta{
 .more__text-title{
     margin-bottom: $base4;
     font-family: $primary;
-    @include poly-fluid-sizing("font-size",($xs: $base3, $xl: $base5, $xxxl: $base7));
+    @include poly-fluid-sizing("font-size",($xs: $base4, $xl: $base5, $xxxl: $base7));
     font-weight: $medium;
     color: $black;
     line-height: 1.25;
@@ -342,13 +394,18 @@ a.pricing__tile-cta{
 }
 
 .more__cards{
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    
+    @include min($sm){
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .more__card{
     @include poly-fluid-sizing("padding-left",($xs: $base3, $lg: $base6, $xxxl: $base6));
     @include poly-fluid-sizing("padding-right",($xs: $base3, $lg: $base6, $xxxl: $base6));
+    @include poly-fluid-sizing("margin-bottom",($xs: $base3, $sm: $base6));
     display: flex;
     flex-direction: column;
     text-align: center;
